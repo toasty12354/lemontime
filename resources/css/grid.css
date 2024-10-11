@@ -1,0 +1,27 @@
+.content {
+    position: relative;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: 
+        'one'
+        'two'
+        'three';
+    width: min(95%, 70rem);
+}
+
+.content > * {
+    background: lightblue;
+    padding: 30px;
+}
+
+.content > :nth-child(1) {
+    grid-area: one;
+}
+
+.content > :nth-child(2) {
+    grid-area: two;
+}
+
+.content > :nth-child(3) {
+    grid-area: three;
+}

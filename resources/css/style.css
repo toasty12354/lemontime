@@ -1,0 +1,253 @@
+/* Universal Styles */
+
+html {
+    font-family: sans-serif;
+    font-size: 16px;
+    --lemontime-font-family: "Saira Condensed";
+    --lemontime-black: #1C1C1C;
+    --lemontime-yellow: #E2AF24;
+    --lemontime-white: #FFFFFF;
+    --soft-grey: #E8E7E8;
+    --font-size-heading: clamp(1rem, 100%, 3rem);
+    --font-size-body: 5px;
+    --font-size-quote: clamp(1rem, 100%, 3rem);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: grid;
+    position: relative;
+    gap: 3rem;
+    grid-template-areas: 
+        'one'
+        'two'
+        'three';
+    font-family: var(--lemontime-font-family);
+    text-transform: uppercase;
+}
+
+body > :nth-child(1) {
+    grid-area: one;
+}
+
+body > :nth-child(2) {
+    grid-area: two;
+}
+
+body > :nth-child(3) {
+    grid-area: three;
+}
+
+
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    height: 21.3125rem;
+    background-color: var(--lemontime-black);
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-text {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-text button {
+    background-color: var(--lemontime-yellow);
+    border-radius: 28px;
+    margin-left: 2rem;
+}
+
+.nav-subscribe a {
+    color: var(--lemontime-white);
+    text-decoration: none;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-family: var(--lemontime-font-family);
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-menu a {
+    color: var(--lemontime-white);
+    text-decoration: none;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-family: var(--lemontime-font-family);
+    font-weight: 700;
+}
+
+.logo {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 16rem;
+    height: 16rem;
+}
+
+@media only screen and (max-width: 540px) {
+    .logo {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    header {
+        height: 15rem;
+    } 
+
+    .nav-subscribe a {
+        font-size: 1rem;
+    }
+}
+
+/* Main Section */
+
+.main-content {
+    grid-area: two;
+    width: 85%;
+    display: grid;
+    grid-template-areas: 
+        'main-content-one main-content-two';
+    /* grid-template-columns: 1fr 1fr; */
+    position: relative;
+    gap: 1rem;
+    margin: auto;
+}
+
+.main-content > * {
+    /* border: 1px solid black; */
+}
+
+.main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image img {
+    height: auto;
+    max-width: 100%;
+    min-width: 70%;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-area: main-content-two;
+}
+
+.main-text .heading {
+    font-size: 1.5rem;
+}
+
+.main-text .body {
+    font-size: 0.9rem;
+}
+
+.main-text .quotes {
+    font-size: 1.2rem;
+}
+
+.yellow {
+    color: var(--lemontime-yellow);
+}
+
+@media only screen and (max-width: 730px) {
+    .main-content {
+        grid-template-areas: 
+        'main-content-one'
+        'main-content-two';
+    }
+    
+    
+    .main-image img {
+        padding: 1rem;
+        max-width: 70%;
+    }
+
+    .main-text .heading {
+        font-size: 1.5rem;
+    }
+    
+    .main-text .body {
+        font-size: 0.9rem;
+    }
+    
+    .main-text .quotes {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    border: 1px solid black;
+    background-color: var(--lemontime-black);
+    color: var(--lemontime-white);
+    height: 10rem;
+    grid-area: three;
+}
+
+.footer-content {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    height: auto;
+    width: 85%;
+}
+
+.footer-heading-and-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-smallprint {
+    font-size: clamp(0.5rem, 0.8vw, 1rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-smallprint-left, .footer-smallprint-right {
+    display: flex;
+    gap: 10px;
+}
+
+.fa {
+    font-size: 1.8rem;
+    width: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  .fa-facebook, .fa-twitter, .fa-instagram {
+    background: var(--lemontime-black);
+    color: white;
+  }
