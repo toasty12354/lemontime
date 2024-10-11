@@ -102,7 +102,7 @@ header {
     height: 16rem;
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 400px) {
     .logo {
         width: 12rem;
         height: 12rem;
@@ -170,7 +170,7 @@ header {
     color: var(--lemontime-yellow);
 }
 
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 400px) {
     .main-content {
         grid-template-areas: 
         'main-content-one'
