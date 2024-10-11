@@ -102,7 +102,7 @@ header {
     height: 16rem;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 400px) {
     .logo {
         width: 12rem;
         height: 12rem;
@@ -170,13 +170,12 @@ header {
     color: var(--lemontime-yellow);
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 700px) {
     .main-content {
         grid-template-areas: 
         'main-content-one'
         'main-content-two';
     }
-    
     
     .main-image img {
         padding: 1rem;
@@ -196,8 +195,29 @@ header {
     }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 400px) {
+    .main-content {
+        grid-template-areas: 
+        'main-content-one'
+        'main-content-two';
+    }
+    
+    .main-image img {
+        padding: 0.5rem;
+        max-width: 100%;
+    }
 
+    .main-text .heading {
+        font-size: 1.2rem;
+    }
+
+    .main-text .body {
+        font-size: 0.8rem;
+    }
+
+    .main-text .quotes {
+        font-size: 1rem;
+    }
 }
 
 /* Footer */
@@ -207,7 +227,9 @@ footer {
     border: 1px solid black;
     background-color: var(--lemontime-black);
     color: var(--lemontime-white);
-    height: 10rem;
+    /* height: auto; */
+    width: 100%;
+    height: auto;
     grid-area: three;
 }
 
@@ -215,7 +237,7 @@ footer {
     display: flex;
     flex-flow: column;
     justify-content: space-around;
-    height: auto;
+    /* height: auto; */
     width: 85%;
 }
 
